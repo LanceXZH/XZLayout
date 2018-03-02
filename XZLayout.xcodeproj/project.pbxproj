@@ -15,6 +15,7 @@
 		7E2EEB2920492F30002958DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EEB2820492F30002958DA /* main.m */; };
 		7E2EEB3320492F30002958DA /* XZLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EEB3220492F30002958DA /* XZLayoutTests.m */; };
 		7E2EEB3E20492F30002958DA /* XZLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EEB3D20492F30002958DA /* XZLayoutUITests.m */; };
+		7E2EEB4E20492F69002958DA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2EEB4D20492F69002958DA /* UIView+Layout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		7E2EEB3920492F30002958DA /* XZLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2EEB3D20492F30002958DA /* XZLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZLayoutUITests.m; sourceTree = "<group>"; };
 		7E2EEB3F20492F30002958DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2EEB4C20492F69002958DA /* UIView+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		7E2EEB4D20492F69002958DA /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		7E2EEB1820492F30002958DA /* XZLayout */ = {
 			isa = PBXGroup;
 			children = (
+				7E2EEB4B20492F39002958DA /* Classes */,
 				7E2EEB1920492F30002958DA /* AppDelegate.h */,
 				7E2EEB1A20492F30002958DA /* AppDelegate.m */,
 				7E2EEB1C20492F30002958DA /* ViewController.h */,
@@ -130,6 +134,15 @@
 				7E2EEB3F20492F30002958DA /* Info.plist */,
 			);
 			path = XZLayoutUITests;
+			sourceTree = "<group>";
+		};
+		7E2EEB4B20492F39002958DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7E2EEB4C20492F69002958DA /* UIView+Layout.h */,
+				7E2EEB4D20492F69002958DA /* UIView+Layout.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2EEB4E20492F69002958DA /* UIView+Layout.m in Sources */,
 				7E2EEB1E20492F30002958DA /* ViewController.m in Sources */,
 				7E2EEB2920492F30002958DA /* main.m in Sources */,
 				7E2EEB1B20492F30002958DA /* AppDelegate.m in Sources */,
