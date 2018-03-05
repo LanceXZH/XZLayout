@@ -60,25 +60,29 @@ if result.include?('not able')
     #防止not able to update the 'master' repo
     puts(`sudo rm -fr ~/.cocoapods/repos/master`)
     puts(`pod setup`)
-    puts(`pod trunk push #{PODNAME}.podspec --allow-warnings`)
+    result = `pod trunk push #{PODNAME}.podspec --allow-warnings`
+    puts(result)
 end
-
 
 if result.include?('NoMethodError')
     puts(`sudo gem update --system`)
     puts(`sudo gem install cocoapods`)
     puts(`sudo gem install cocoapods-trunk`)
-    puts(`pod trunk push #{PODNAME}.podspec --allow-warnings`)
+    result = `pod trunk push #{PODNAME}.podspec --allow-warnings`
+    puts(result)
 end
 
 #安装最新版本
 if result.include?('NoMethodError')
-    puts(`pod setup`)
+    puts(`pod setup`) #提示新版本安装
     puts(`gem install cocoapods`)
     puts(`pod trunk push #{PODNAME}.podspec --allow-warnings`)
 end
 
 
+#删除索引，保证pod search可以搜到到结果
+File.delete( "~/Library/Caches/CocoaPods/search_index.json")
+puts(`pod search #{PODNAME}`)
 
 
 
